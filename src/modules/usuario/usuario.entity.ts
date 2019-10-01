@@ -25,8 +25,7 @@ export class Usuario {
     @Column({name: 'ultimo_acesso'})
     ultimoAcesso: Date;
 
-    @ManyToOne(type => Permissao)
+    @ManyToOne(type => Permissao, { eager: true })
     @JoinColumn({name: 'permissao_id'})
     permissao: Permissao;
-
 }
