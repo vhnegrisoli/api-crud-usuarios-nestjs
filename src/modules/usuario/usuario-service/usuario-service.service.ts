@@ -88,7 +88,7 @@ export class UsuarioService {
     }
 
     delete(id) {
-        let usuario = { id: id }
-        return this.usuarioRepository.delete(usuario);
+        this.findOne(id);
+        return this.usuarioRepository.delete(id);
     }
 }

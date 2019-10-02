@@ -32,7 +32,7 @@ export class UsuarioController {
         return this.usuarioService.save(usuario);
     }
 
-    @Delete()
+    @Delete('/:id')
     async delete(@Param('id') id) {
         return this.usuarioService.delete(id);
     }
